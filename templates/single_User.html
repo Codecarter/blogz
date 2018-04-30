@@ -1,0 +1,8 @@
+{% extends 'base.html' %} {% block content %}
+blog posts
+{% for post in blogs %} {{post.title}}
+{{post.body}}
+
+written by {{user.username}}
+{% endfor %}
+{% endblock %}

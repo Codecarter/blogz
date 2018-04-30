@@ -1,0 +1,10 @@
+{% extends "base.html" %} {% block content %}
+sign up
+username	
+{{request.form['username']}}
+ {{username_error}}{{error}}{{user_error}}{{no_user}}{{inval_user_err}}
+password	
+ {{password_error}}{{pw_error}}{{inval_pass_err}}
+re-enter password	
+ {{verify_error}}{{vfy_error}}{{match_error}}
+{% endblock %}
