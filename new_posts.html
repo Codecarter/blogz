@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='form'>
+<h1 class='top-title'>blog entry</h1>
+<br>
+<div type='container' id='div-cont'>
+    <form action='/blog' method='post'>
+        <div>
+            <label for='blog-post'>title:</label>
+            <input type="text" name='post-title' value='{{request.form['post-title']}}'/>
+            <br />
+            <span class='error'>{{title_error}}</span>
+        </div>
+        <br>
+        <br>
+        <div>
+            <label for='blog-post2' >blog post:</label>
+            <textarea rows='3'  type="text" name='post-body' value='{{request.form['post-body']}}'></textarea>
+            <span class='error'>{{body_error}}</span>
+        </div>
+            <br>
+            <input type="submit" value='post' />
+    </form>
+</div>
+</div>
+{% endblock %}

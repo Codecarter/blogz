@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head>
+        <style type='text/css'>
+            .error{
+                color: red;
+                font-style: normal;
+            }
+            .link1{
+                margin-top: 45px;
+                padding-left: 425px;
+            }
+            .link2, .link3, .link5 {
+                margin-top: 45px;
+                padding-left: 15px;
+            }
+            .link4{
+                margin-top: 45px;
+                padding-left: 15px;
+            }
+            .top-title{
+                font-size: 24pt;
+            }
+            .form {
+                padding-left: 500px;
+            }
+            a {
+                font-family: sans-serif;
+                font-weight: normal;
+            }
+            label {
+                display: block;
+            }
+            p {
+                font-size: 14pt;
+                font-weight: normal;
+            }
+            textarea {
+                display: block;
+            }
+            #div-cont {
+                padding-left: 20px
+            }
+            #signup {
+                padding-left: 550px;
+            }
+            hr {
+
+                height: .2px;
+            }
+
+        </style>
+        {% if 'username' in session %}
+        <p class='logged-in'></p>
+        {% else %}
+        <p class='logged-out'></p>
+        {% endif %}
+        <title>{{title}}</title>
+    </head>
+<body>
+
+    <div>
+        <a href='/' class='link1'>home</a><a href="/blog" class='link2'>all blogs</a><a href='/newpost' class='link3'>new post</a>
+        <a href="/login" class='link4'>login</a><a href='/logout' class='link5'>logout</a>
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>

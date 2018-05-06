@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class='form'>
+    <h1>blog posts</h1>
+{% for post in blogs %}
+    <a href='/blog?id={{post.id}}'>{{post.title}}</a>
+    <p>{{post.body}}</p>
+    <h6>written by <a href='/blogs?user={{post.owner.username}}' >{{user.username}}</a></h6>
+{% endfor %}
+</div>
+{% endblock %}

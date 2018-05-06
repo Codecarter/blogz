@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class='form'>
+    <h1>{{posts.title}}</h1>
+    <p>{{posts.body}}</p>
+    <h6>written by <a href='/blogs?user={{posts.owner.username}}' >{{posts.owner.username}}</a></h6>
+</div>
+{% endblock %}
